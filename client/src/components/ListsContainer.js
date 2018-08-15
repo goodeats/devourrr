@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
+import NewListForm from './NewListForm';
 import axios from 'axios';
 
 class ListsContainer extends Component {
@@ -22,9 +23,16 @@ class ListsContainer extends Component {
     .catch(error => console.log(error))
   }
 
+  addNewList(title, excerpt){
+    console.log(title, excerpt);
+  }
+
   render() {
     return (
       <div className="Lists-container">
+        <div>
+          <NewListForm onNewList={this.addNewList} />
+        </div>
         {this.state.lists.map(list => {
           return (
             <List list={list} key={list.id} />
