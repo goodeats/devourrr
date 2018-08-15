@@ -9,6 +9,7 @@ class ListsContainer extends Component {
     this.state = {
       lists: []
     }
+    this.addNewList = this.addNewList.bind(this)
   }
 
   componentDidMount() {
@@ -25,6 +26,15 @@ class ListsContainer extends Component {
 
   addNewList(title, excerpt){
     console.log(title, excerpt);
+    axios.post('/api/v1/lists', { list: {title, excerpt} })
+    .then(response => {
+        console.log(response)
+        const lists = [ ...this.state.lists, response.data ]
+        this.setState({lists})
+    })
+    .catch(error => {
+        console.log(error)
+    })
   }
 
   render() {
