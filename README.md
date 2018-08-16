@@ -1,24 +1,12 @@
-# README
+# ReactJS + Ruby on Rails API + Heroku App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A few notes from building a React Front-end with Rails API on the same stack, with basic CRUD functionalities, and uploading it to Heroku.
 
-Things you may want to cover:
+Tutorial => [https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814)
 
-* Ruby version
+Heroku => [https://pat-rails-react.herokuapp.com/](https://pat-rails-react.herokuapp.com/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To Run =>
+* bundle install && npm install
+* rake db:create db:migrate db:seed
+* rake start
